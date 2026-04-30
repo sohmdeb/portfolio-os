@@ -10,71 +10,49 @@ const Experience: React.FC<ExperienceProps> = (props) => {
             <div style={styles.headerContainer}>
                 <div style={styles.header}>
                     <div style={styles.headerRow}>
-                        <h1>Hover</h1>
-                        <a
-                            rel="noreferrer"
-                            target="_blank"
-                            href={'https://hover.gg/'}
-                        >
-                            <h4>www.hover.gg</h4>
-                        </a>
+                        <h1>Freelance Video Editor</h1>
                     </div>
                     <div style={styles.headerRow}>
-                        <h3>Frontend Engineer</h3>
+                        <h3>Self-Employed</h3>
                         <b>
-                            <p>Summer 2020 - Fall 2021</p>
+                            <p>2022 - Present</p>
                         </b>
                     </div>
                 </div>
             </div>
             <div className="text-block">
                 <p>
-                    Targeted towards online content creators and streamers
-                    looking to build a brand, Hover is the home of over 150K
-                    users. Written in Typescript using React, React-Native,
-                    Framer, Express, and Redux.
+                    Professional freelance video editing for clients across
+                    multiple industries. Delivering polished, high-quality
+                    content with fast turnaround times.
                 </p>
                 <br />
                 <ul>
                     <li>
                         <p>
-                            Architected and engineered the vertical scrolling
-                            discover player which, at its daily peak, was
-                            responsible for generating over 600,000 views across
-                            20,000 active users.
+                            Edited promotional videos, social media content,
+                            brand reels, and highlight videos for individual
+                            clients and businesses.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Designed and implemented multiple features to
-                            increase app usability and user experience while
-                            ensuring the quality, maintainability and
-                            scalability of the front end as the user base grew
-                            by over 50,000.
+                            Delivered over 50+ projects with consistently
+                            positive client feedback and repeat business.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Coordinated major refactors targeted towards app
-                            optimization and performance resulting in a smoother
-                            user experience and accomplished by eliminating
-                            redundant re-renders and API calls by over 50%.
+                            Specialized in fast-paced edits with dynamic
+                            transitions, color grading, and sound design
+                            using Premiere Pro, After Effects, and DaVinci
+                            Resolve.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Directed and executed an internal migration of 3
-                            individual repositories to a single monorepo,
-                            greatly reducing overhead for developing new
-                            features, fixing bugs, and managing dependencies.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Rebuilt the website with React and shared mobile app
-                            components allowing users to access a wide variety
-                            of app interactions entirely on the web, resulting
-                            in over 700,000 total site visits.
+                            Created 3D motion graphics and animations using
+                            Blender for client projects and personal work.
                         </p>
                     </li>
                 </ul>
@@ -82,55 +60,55 @@ const Experience: React.FC<ExperienceProps> = (props) => {
             <div style={styles.headerContainer}>
                 <div style={styles.header}>
                     <div style={styles.headerRow}>
-                        <h1>BrACS</h1>
-                        <a
-                            target="_blank"
-                            rel="noreferrer"
-                            href={'https://bracs.co/'}
-                        >
-                            <h4>www.bracs.co</h4>
-                        </a>
+                        <h1>YouTube Creator — xZyn</h1>
                     </div>
                     <div style={styles.headerRow}>
-                        <h3>Team Lead & Engineer</h3>
+                        <h3>23,000+ Subscribers</h3>
                         <b>
-                            <p>Fall 2021 - Spring 2022</p>
+                            <p>2020 - 2023</p>
                         </b>
                     </div>
                 </div>
             </div>
             <div className="text-block">
                 <p>
-                    Supervised and developed the front end of bracs.co, a
-                    beautifully simple and effective bracket creation and
-                    management engine. Written in Typescript using React and
-                    deployed using AWS Elastic Beanstalk.
+                    Built and grew the YouTube channel xZyn to over
+                    23,000 subscribers, creating Discord-focused
+                    tutorial content including how-to guides, tips
+                    & tricks, and feature showcases. The channel
+                    accumulated over 57 videos and significant
+                    viewership.
                 </p>
                 <br />
                 <ul>
                     <li>
                         <p>
-                            Managed the project and team members by conducting
-                            bi-weekly stand-ups.
+                            Full creative ownership — scripting, screen
+                            recording (OBS Studio), editing (Sony Vegas
+                            Pro), thumbnail design (Adobe Photoshop),
+                            and publishing.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Architected bracket view UI using React Flow and
-                            custom bracket data types built from binary trees.
+                            Hit 5K subscribers in April 2021, 10K later
+                            that same month, and crossed 20K by July
+                            2021 — driven by viral Discord tutorial
+                            content.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Created conversion algorithms to serialize bracket
-                            tree data to allow for saving in the cloud.
+                            Developed a consistent visual style and
+                            editing rhythm optimized for audience
+                            retention and engagement.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Implemented bracket generation utilities which
-                            employ gray code for proper team seeding and
-                            placement.
+                            Channel was successfully sold in 2022 after
+                            building it to a sustainable, monetized
+                            audience.
                         </p>
                     </li>
                 </ul>
@@ -138,101 +116,140 @@ const Experience: React.FC<ExperienceProps> = (props) => {
             <div style={styles.headerContainer}>
                 <div style={styles.header}>
                     <div style={styles.headerRow}>
-                        <h1>K-F/X</h1>
-                        <a
-                            target="_blank"
-                            rel="noreferrer"
-                            href={'https://kfxnyc.com/'}
-                        >
-                            <h4>www.kfxnyc.com</h4>
-                        </a>
+                        <h1>Northstar Robotics</h1>
                     </div>
                     <div style={styles.headerRow}>
-                        <h3>Special Effects Technician</h3>
+                        <h3>Video Editor & Content Creator</h3>
                         <b>
-                            <p>Fall 2019, Summer 2021</p>
+                            <p>2026 - Present</p>
                         </b>
                     </div>
                 </div>
             </div>
             <div className="text-block">
                 <p>
-                    Applied problem solving and technical skills to operate
-                    large equipment such as rain machines, fog machines, small
-                    explosives and general rigging with a professional crew of
-                    50+ people.
+                    Producing promotional video content and social media
+                    material for{' '}
+                    <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href="https://instagram.com/northstarrobotics.ai"
+                    >
+                        Northstar Robotics
+                    </a>
+                    , an AI and robotics organization.
                 </p>
                 <br />
-                <h3 style={styles.indent}>Screen Credits:</h3>
                 <ul>
-                    <li style={styles.row}>
-                        <p>• Ray Donovan</p>
+                    <li>
                         <p>
-                            [{' '}
-                            <a
-                                href="https://www.sho.com/ray-donovan"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                SHOWTIME
-                            </a>{' '}
-                            ]
+                            Created brand videos, product demos, and
+                            social media reels showcasing robotics and AI
+                            technology.
                         </p>
                     </li>
-                    <li style={styles.row}>
-                        <p>• Ray Donovan: The Movie</p>
+                    <li>
                         <p>
-                            [{' '}
-                            <a
-                                href="https://www.sho.com/titles/3508117/ray-donovan-the-movie"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                SHOWTIME
-                            </a>{' '}
-                            ]
+                            Developed a cohesive visual identity across
+                            video content, aligning with the brand's
+                            modern, tech-forward aesthetic.
                         </p>
                     </li>
-                    <li style={styles.row}>
-                        <p>• Hightown</p>
+                </ul>
+            </div>
+            <div style={styles.headerContainer}>
+                <div style={styles.header}>
+                    <div style={styles.headerRow}>
+                        <h1>Nexis Intelligence</h1>
+                    </div>
+                    <div style={styles.headerRow}>
+                        <h3>Video Production</h3>
+                        <b>
+                            <p>2026 - Present</p>
+                        </b>
+                    </div>
+                </div>
+            </div>
+            <div className="text-block">
+                <p>
+                    Producing video content for{' '}
+                    <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href="https://nexisintelligence.co.in/"
+                    >
+                        Nexis Intelligence
+                    </a>
+                    , a data intelligence and AI infrastructure company.
+                </p>
+                <br />
+                <ul>
+                    <li>
                         <p>
-                            [{' '}
-                            <a
-                                href="https://www.starz.com/us/en/series/hightown/57463"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                STARZ
-                            </a>{' '}
-                            ]
+                            Created promotional and explainer videos for
+                            AI-enhanced data infrastructure products.
                         </p>
                     </li>
-                    <li style={styles.row}>
-                        <p>• Bull</p>
+                    <li>
                         <p>
-                            [{' '}
-                            <a
-                                href="https://www.cbs.com/shows/bull/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                CBS
-                            </a>{' '}
-                            ]
+                            Delivered polished content for social media and
+                            client-facing presentations.
                         </p>
                     </li>
-                    <li style={styles.row}>
-                        <p>• At Home with Amy Sedaris</p>
+                </ul>
+            </div>
+            <div style={styles.headerContainer}>
+                <div style={styles.header}>
+                    <div style={styles.headerRow}>
+                        <h1>Ataraxia</h1>
+                    </div>
+                    <div style={styles.headerRow}>
+                        <h3>Lead Video Editor</h3>
+                        <b>
+                            <p>2023 - 2025</p>
+                        </b>
+                    </div>
+                </div>
+            </div>
+            <div className="text-block">
+                <p>
+                    Lead video editor for{' '}
+                    <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href="https://instagram.com/ataraxia.social"
+                    >
+                        Ataraxia
+                    </a>
+                    , producing promotional teasers, event coverage, and
+                    aftermovies.
+                </p>
+                <br />
+                <ul>
+                    <li>
                         <p>
-                            [{' '}
-                            <a
-                                href="https://www.trutv.com/shows/at-home-with-amy-sedaris"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                truTV
-                            </a>{' '}
-                            ]
+                            Created promotional teasers and reels that
+                            drove event registrations and social media
+                            engagement.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Produced the official aftermovie — syncing
+                            footage from 4+ camera angles, color grading
+                            over 200 clips.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Collaborated with photography and design teams
+                            to deliver cohesive visual branding.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            A fresher's/farewell event hosted and curated
+                            by me.
                         </p>
                     </li>
                 </ul>
@@ -265,17 +282,10 @@ const styles: StyleSheetCSS = {
         marginLeft: 8,
         height: 8,
     },
-    hoverLogo: {
-        height: 32,
-        marginBottom: 16,
-    },
     headerContainer: {
         alignItems: 'flex-end',
         width: '100%',
         justifyContent: 'center',
-    },
-    hoverText: {
-        marginBottom: 8,
     },
     indent: {
         marginLeft: 24,

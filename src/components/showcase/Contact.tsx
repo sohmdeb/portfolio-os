@@ -11,7 +11,7 @@ export interface ContactProps {}
 const validateEmail = (email: string) => {
     const re =
         // eslint-disable-next-line
-        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 };
 
@@ -56,44 +56,19 @@ const Contact: React.FC<ContactProps> = (props) => {
         }
         try {
             setIsLoading(true);
-            const res = await fetch(
-                'https://api.henryheffernan.com/api/contact',
-                {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        company,
-                        email,
-                        name,
-                        message,
-                    }),
-                }
-            );
-            // the response will be either {success: true} or {success: false, error: message}
-            const data = (await res.json()) as
-                | {
-                      success: false;
-                      error: string;
-                  }
-                | { success: true };
-            if (data.success) {
-                setFormMessage(`Message successfully sent. Thank you ${name}!`);
-                setCompany('');
-                setEmail('');
-                setName('');
-                setMessage('');
-                setFormMessageColor(colors.blue);
-                setIsLoading(false);
-            } else {
-                setFormMessage(data.error);
-                setFormMessageColor(colors.red);
-                setIsLoading(false);
-            }
+            // Simple mailto fallback since we don't have a backend
+            const mailtoLink = `mailto:soham.deb@iiitb.ac.in?subject=Portfolio Contact from ${name}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nCompany: ${company}\n\nMessage:\n${message}`)}`;
+            window.open(mailtoLink, '_blank');
+            setFormMessage(`Opening email client. Thank you ${name}!`);
+            setCompany('');
+            setEmail('');
+            setName('');
+            setMessage('');
+            setFormMessageColor(colors.blue);
+            setIsLoading(false);
         } catch (e) {
             setFormMessage(
-                'There was an error sending your message. Please try again.'
+                'There was an error. Please email me directly at soham.deb@iiitb.ac.in'
             );
             setFormMessageColor(colors.red);
             setIsLoading(false);
@@ -116,30 +91,30 @@ const Contact: React.FC<ContactProps> = (props) => {
                 <div style={styles.socials}>
                     <SocialBox
                         icon={ghIcon}
-                        link={'https://github.com/henryjeff'}
+                        link={'https://github.com/sohmdeb'}
                     />
                     <SocialBox
                         icon={inIcon}
-                        link={'https://www.linkedin.com/in/henryheffernan/'}
+                        link={'https://www.linkedin.com/in/soham-deb-a5746b243/'}
                     />
                     <SocialBox
                         icon={twitterIcon}
-                        link={'https://twitter.com/henryheffernan'}
+                        link={'https://x.com/rehssim1'}
                     />
                 </div>
             </div>
             <div className="text-block">
                 <p>
-                    I am currently employed, however if you have any
-                    opportunities, feel free to reach out - I would love to
-                    chat! You can reach me via my personal email, or fill out
-                    the form below!
+                    I am currently available for freelance video editing work.
+                    If you have a project in mind, feel free to reach out - I
+                    would love to collaborate! You can reach me via email, or
+                    fill out the form below!
                 </p>
                 <br />
                 <p>
                     <b>Email: </b>
-                    <a href="mailto:henryheffernan@gmail.com">
-                        henryheffernan@gmail.com
+                    <a href="mailto:soham.deb@iiitb.ac.in">
+                        soham.deb@iiitb.ac.in
                     </a>
                 </p>
 
@@ -245,7 +220,7 @@ const Contact: React.FC<ContactProps> = (props) => {
                     </div>
                 </div>
             </div>
-            <ResumeDownload altText="Need a copy of my Resume?" />
+            <ResumeDownload altText="Need to see my showreel?" />
         </div>
     );
 };
@@ -293,7 +268,6 @@ const styles: StyleSheetCSS = {
     social: {
         width: 4,
         height: 4,
-        // borderRadius: 1000,
 
         justifyContent: 'center',
         alignItems: 'center',

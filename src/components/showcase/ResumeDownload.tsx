@@ -1,6 +1,7 @@
 import React from 'react';
 import printer from '../../assets/resume/printer.gif';
-import Resume from '../../assets/resume/Henry_Heffernan_S22_Resume.pdf';
+// Showreel served from public folder
+const Showreel = process.env.PUBLIC_URL + '/showreel.mp4';
 
 export interface ResumeDownloadProps {
     altText?: string;
@@ -11,9 +12,9 @@ const ResumeDownload: React.FC<ResumeDownloadProps> = ({ altText }) => {
         <div style={styles.resumeContainer}>
             <img style={styles.resumePrinter} alt="" src={printer} />
             <div style={styles.resumeContainerText}>
-                <h3>{altText ? altText : 'Looking for my resume?'}</h3>
-                <a rel="noreferrer" target="_blank" href={Resume}>
-                    <p>Click here to download it!</p>
+                <h3>{altText ? altText : 'Looking for my showreel?'}</h3>
+                <a rel="noreferrer" target="_blank" href={Showreel}>
+                    <p>Click here to view it!</p>
                 </a>
             </div>
         </div>

@@ -68,35 +68,34 @@ const Projects: React.FC<ProjectsProps> = (props) => {
     return (
         <div className="site-page-content">
             <h1>Projects</h1>
-            <h3>& Hobbies</h3>
+            <h3>& Creative Work</h3>
             <br />
             <p>
                 Click on one of the areas below to check out some of my favorite
-                projects I've done in that field. I spent a lot of time to
-                include a lot of visuals and interactive media to showcase each
-                project. Enjoy!
+                projects. I've included visuals and descriptions to showcase
+                each project category. Enjoy!
             </p>
             <br />
             <div style={styles.projectLinksContainer}>
                 <ProjectBox
                     icon={software}
                     iconStyle={styles.computerIcon}
-                    title="Software"
+                    title="Video Editing"
                     subtitle="PROJECTS"
                     route="software"
                 />
                 <ProjectBox
                     icon={music}
                     iconStyle={styles.musicIcon}
-                    title="Music"
-                    subtitle="VENTURES"
+                    title="3D & Blender"
+                    subtitle="CREATIONS"
                     route="music"
                 />
                 <ProjectBox
                     icon={art}
                     iconStyle={styles.artIcon}
-                    title="Art"
-                    subtitle="ENDEAVORS"
+                    title="Gaming & More"
+                    subtitle="SKILLS"
                     route="art"
                 />
             </div>
