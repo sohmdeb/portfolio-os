@@ -1,7 +1,7 @@
 import React from 'react';
 import printer from '../../assets/resume/printer.gif';
-// Showreel served from public folder
-const Showreel = process.env.PUBLIC_URL + '/showreel.mp4';
+// Showreel on Google Drive
+const Showreel = 'https://drive.google.com/drive/folders/1CvtyeCTe6bw7KMmHAW3t-_P1YNzDF4IA?usp=drive_link';
 
 export interface ResumeDownloadProps {
     altText?: string;
