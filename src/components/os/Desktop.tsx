@@ -214,9 +214,9 @@ const Desktop: React.FC<DesktopProps> = (props) => {
     const desktopBgStyle: React.CSSProperties = {
         minHeight: '100%',
         flex: 1,
-        backgroundColor: settings.wallpaper ? undefined : (settings.backgroundColor || Colors.turquoise),
+        backgroundColor: settings.wallpaper ? (settings.backgroundColor || Colors.turquoise) : (settings.backgroundColor || Colors.turquoise),
         backgroundImage: settings.wallpaper ? `url(${settings.wallpaper})` : undefined,
-        backgroundSize: settings.wallpaperMode === 'tile' ? 'auto' : settings.wallpaperMode === 'stretch' ? 'cover' : 'contain',
+        backgroundSize: settings.wallpaperMode === 'tile' ? '200px 200px' : 'cover',
         backgroundRepeat: settings.wallpaperMode === 'tile' ? 'repeat' : 'no-repeat',
         backgroundPosition: 'center',
     };

@@ -76,9 +76,8 @@ const DisplayProperties: React.FC<DisplayPropertiesProps> = (props) => {
     const getPreviewBg = (): React.CSSProperties => {
         if (currentWP.url) {
             const url = currentWP.url.startsWith('blob:') ? currentWP.url : process.env.PUBLIC_URL + currentWP.url;
-            if (dispMode === 'tile') return { backgroundImage: `url(${url})`, backgroundSize: '40%', backgroundRepeat: 'repeat' };
-            if (dispMode === 'stretch') return { backgroundImage: `url(${url})`, backgroundSize: 'cover', backgroundPosition: 'center' };
-            return { backgroundImage: `url(${url})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundColor: bgColor };
+            if (dispMode === 'tile') return { backgroundImage: `url(${url})`, backgroundSize: '30%', backgroundRepeat: 'repeat', backgroundColor: bgColor };
+            return { backgroundImage: `url(${url})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundColor: bgColor };
         }
         return { backgroundColor: bgColor };
     };
