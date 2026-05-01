@@ -3,6 +3,7 @@ import colors from '../../constants/colors';
 import twitterIcon from '../../assets/pictures/contact-twitter.png';
 import ghIcon from '../../assets/pictures/contact-gh.png';
 import inIcon from '../../assets/pictures/contact-in.png';
+import igIcon from '../../assets/pictures/contact-ig.png';
 import ResumeDownload from './ResumeDownload';
 
 export interface ContactProps {}
@@ -100,6 +101,10 @@ const Contact: React.FC<ContactProps> = (props) => {
                     <SocialBox
                         icon={twitterIcon}
                         link={'https://x.com/rehssim1'}
+                    />
+                    <SocialBox
+                        icon={igIcon}
+                        link={'https://instagram.com/sohmdeb'}
                     />
                 </div>
             </div>

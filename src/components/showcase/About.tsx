@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import me from '../../assets/pictures/workingAtComputer.jpg';
 import meNow from '../../assets/pictures/currentme.jpg';
 import { Link } from 'react-router-dom';
@@ -7,6 +7,15 @@ import ResumeDownload from './ResumeDownload';
 export interface AboutProps {}
 
 const About: React.FC<AboutProps> = (props) => {
+    useEffect(() => {
+        const audio = new Audio(process.env.PUBLIC_URL + '/intro.mp3');
+        audio.volume = 0.5;
+        audio.play().catch(() => {});
+        return () => {
+            audio.pause();
+            audio.currentTime = 0;
+        };
+    }, []);
     return (
         // add on resize listener
         <div className="site-page-content">

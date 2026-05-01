@@ -1,10 +1,10 @@
 import React from 'react';
 import ResumeDownload from '../ResumeDownload';
-import blenderRx7 from '../../../assets/pictures/projects/blender_rx7.jpg';
-import blenderPorsche from '../../../assets/pictures/projects/blender_porsche.jpg';
-import blenderFerrari from '../../../assets/pictures/projects/blender_ferrari.jpg';
+import blenderRx7 from '../../../assets/pictures/projects/blender_rx7.gif';
+import blenderPorsche from '../../../assets/pictures/projects/blender_porsche.gif';
+import blenderFerrari from '../../../assets/pictures/projects/blender_ferrari.gif';
 import ps5Render from '../../../assets/pictures/projects/ps5_render.png';
-import blenderBmw from '../../../assets/pictures/projects/blender_bmw.jpg';
+import blenderBmw from '../../../assets/pictures/projects/blender_bmw.gif';
 
 export interface MusicProjectsProps {}
 
