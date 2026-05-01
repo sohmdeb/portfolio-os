@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Colors from '../../constants/colors';
+import { useDesktopSettings } from '../../constants/DesktopSettingsContext';
 import ShowcaseExplorer from '../applications/ShowcaseExplorer';
 import Doom from '../applications/Doom';
 import OregonTrail from '../applications/OregonTrail';
@@ -208,8 +209,20 @@ const Desktop: React.FC<DesktopProps> = (props) => {
         [getHighestZIndex]
     );
 
+    const { settings } = useDesktopSettings();
+
+    const desktopBgStyle: React.CSSProperties = {
+        minHeight: '100%',
+        flex: 1,
+        backgroundColor: settings.wallpaper ? undefined : (settings.backgroundColor || Colors.turquoise),
+        backgroundImage: settings.wallpaper ? `url(${settings.wallpaper})` : undefined,
+        backgroundSize: settings.wallpaperMode === 'tile' ? 'auto' : settings.wallpaperMode === 'stretch' ? 'cover' : 'contain',
+        backgroundRepeat: settings.wallpaperMode === 'tile' ? 'repeat' : 'no-repeat',
+        backgroundPosition: 'center',
+    };
+
     return !shutdown ? (
-        <div style={styles.desktop}>
+        <div style={desktopBgStyle}>
             {/* For each window in windows, loop over and render  */}
             {Object.keys(windows).map((key) => {
                 const element = windows[key].component;
