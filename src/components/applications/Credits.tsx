@@ -3,7 +3,7 @@ import Window from '../os/Window';
 import { useInterval } from 'usehooks-ts';
 import { motion } from 'framer-motion';
 
-export interface CreditsProps extends WindowAppProps {}
+export interface CreditsProps extends WindowAppProps { }
 
 const CREDITS = [
     {
@@ -14,7 +14,7 @@ const CREDITS = [
         title: 'Modeling & Texturing',
         rows: [
             ['Soham Deb', 'Texturing, Composition, & UV'],
-            ['Mickael Boitte', 'Computer Model'],
+            ['Soham Deb', 'Computer Model'],
             ['Sean Nicolas', 'Environment Models'],
         ],
     },
@@ -29,16 +29,9 @@ const CREDITS = [
     {
         title: 'Special Thanks',
         rows: [
-            ['Bruno Simon', 'SimonDev'],
-            ['Lorelei Kravinsky', 'Scott Bass'],
-            ['Trey Briccetti', 'Mom, Dad & Angela'],
-        ],
-    },
-    {
-        title: 'Inspiration',
-        rows: [
-            ['Bruno Simon', 'Jesse Zhou'],
-            ['Pink Yellow', 'Vivek Patel'],
+            ['ElevenLabs - AI Voice', 'Blender'],
+            ['Claude Code', 'Photoshop'],
+            ['Microsoft', 'Inspired from Windows 95'],
         ],
     },
 ];
@@ -78,7 +71,7 @@ const Credits: React.FC<CreditsProps> = (props) => {
             closeWindow={props.onClose}
             onInteract={props.onInteract}
             minimizeWindow={props.onMinimize}
-            bottomLeftText={'© Copyright 2025 Soham Deb'}
+            bottomLeftText={'© Copyright 2026 Soham Deb'}
         >
             <div
                 onMouseDown={nextSlide}
@@ -86,7 +79,7 @@ const Credits: React.FC<CreditsProps> = (props) => {
                 style={styles.credits}
             >
                 <h2>Credits</h2>
-                <p>sohamdeb.com, 2025</p>
+                <p>s0ham.dev, 2026</p>
                 <br />
                 <br />
                 <br />
