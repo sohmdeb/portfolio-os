@@ -17,6 +17,7 @@ import windowGameIcon from './windowGameIcon.png';
 import windowExplorerIcon from './windowExplorerIcon.png';
 import windowsStartIcon from './windowsStartIcon.png';
 import scrabbleIcon from './scrabbleIcon.png';
+import displayIcon from './displayIcon.png';
 import close from './close.png';
 
 const icons = {
@@ -38,6 +39,7 @@ const icons = {
     windowExplorerIcon: windowExplorerIcon,
     windowsStartIcon: windowsStartIcon,
     trailIcon: trailIcon,
+    displayIcon: displayIcon,
 };
 
 export type IconName = keyof typeof icons;

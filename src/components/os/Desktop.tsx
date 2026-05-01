@@ -9,6 +9,7 @@ import Henordle from '../applications/Henordle';
 import Toolbar from './Toolbar';
 import DesktopShortcut, { DesktopShortcutProps } from './DesktopShortcut';
 import Scrabble from '../applications/Scrabble';
+import DisplayProperties from '../applications/DisplayProperties';
 import { IconName } from '../../assets/icons';
 import Credits from '../applications/Credits';
 
@@ -65,6 +66,12 @@ const APPLICATIONS: {
         name: 'Credits',
         shortcutIcon: 'credits',
         component: Credits,
+    },
+    display: {
+        key: 'display',
+        name: 'Display Properties',
+        shortcutIcon: 'displayIcon',
+        component: DisplayProperties,
     },
 };
 
@@ -246,6 +253,20 @@ const Desktop: React.FC<DesktopProps> = (props) => {
                 windows={windows}
                 toggleMinimize={toggleMinimize}
                 shutdown={startShutdown}
+                openApp={(key: string) => {
+                    const app = APPLICATIONS[key];
+                    if (app) {
+                        addWindow(
+                            app.key,
+                            <app.component
+                                onInteract={() => onWindowInteract(app.key)}
+                                onMinimize={() => minimizeWindow(app.key)}
+                                onClose={() => removeWindow(app.key)}
+                                key={app.key}
+                            />
+                        );
+                    }
+                }}
             />
         </div>
     ) : (
