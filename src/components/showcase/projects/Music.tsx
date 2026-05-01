@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ResumeDownload from '../ResumeDownload';
 import blenderRx7 from '../../../assets/pictures/projects/blender_rx7.gif';
 import blenderPorsche from '../../../assets/pictures/projects/blender_porsche.gif';
@@ -9,6 +9,15 @@ import blenderBmw from '../../../assets/pictures/projects/blender_bmw.gif';
 export interface MusicProjectsProps {}
 
 const MusicProjects: React.FC<MusicProjectsProps> = (props) => {
+    useEffect(() => {
+        const audio = new Audio(process.env.PUBLIC_URL + '/blender.mp3');
+        audio.volume = 0.5;
+        audio.play().catch(() => {});
+        return () => {
+            audio.pause();
+            audio.currentTime = 0;
+        };
+    }, []);
     return (
         <div className="site-page-content">
             <h1>3D & Blender</h1>
