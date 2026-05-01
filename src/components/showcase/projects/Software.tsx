@@ -105,6 +105,15 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = (props) => {
                     >
                         Ataraxia
                     </a>
+                    {' '}({' '}
+                    <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href="https://ataraxia-lilac.vercel.app/"
+                    >
+                        Website
+                    </a>
+                    {' '})
                     . Created promotional teasers, event coverage videos,
                     and the official aftermovie. This was one of my most
                     ambitious projects, requiring coordination with

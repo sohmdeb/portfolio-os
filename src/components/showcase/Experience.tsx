@@ -72,8 +72,9 @@ const Experience: React.FC<ExperienceProps> = (props) => {
             </div>
             <div className="text-block">
                 <p>
-                    Built and grew the YouTube channel xZyn to over
-                    23,000 subscribers, creating Discord-focused
+                    Built and grew the YouTube channel{' '}
+                    <a href="https://www.youtube.com/@ConnersHowTo" target="_blank" rel="noreferrer">xZyn</a>{' '}
+                    to over 23,000 subscribers, creating Discord-focused
                     tutorial content including how-to guides, tips
                     & tricks, and feature showcases. The channel
                     accumulated over 57 videos and significant
@@ -221,6 +222,15 @@ const Experience: React.FC<ExperienceProps> = (props) => {
                     >
                         Ataraxia
                     </a>
+                    {' '}({' '}
+                    <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href="https://ataraxia-lilac.vercel.app/"
+                    >
+                        Website
+                    </a>
+                    {' '})
                     , producing promotional teasers, event coverage, and
                     aftermovies.
                 </p>
