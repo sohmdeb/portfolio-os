@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useCallback } from 'react';
 
 export interface DesktopSettings {
-    wallpaper: string | null; // URL or null for solid color
+    wallpaper: string | null;
     wallpaperName: string;
     wallpaperMode: 'tile' | 'center' | 'stretch';
     backgroundColor: string;
@@ -9,6 +9,8 @@ export interface DesktopSettings {
     screenSaverTimeout: number;
     colorScheme: string;
     resolution: string;
+    titleBarColor: string;
+    inactiveTitleBarColor: string;
 }
 
 const DEFAULT_SETTINGS: DesktopSettings = {
@@ -20,6 +22,8 @@ const DEFAULT_SETTINGS: DesktopSettings = {
     screenSaverTimeout: 1,
     colorScheme: 'Windows Standard',
     resolution: '1024 by 768',
+    titleBarColor: '#000080',
+    inactiveTitleBarColor: '#808080',
 };
 
 interface DesktopSettingsContextType {
