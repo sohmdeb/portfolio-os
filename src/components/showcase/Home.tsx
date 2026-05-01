@@ -127,9 +127,11 @@ const styles: StyleSheetCSS = {
         marginBottom: 16,
         lineHeight: 0.9,
         color: '#F5F5F5',
+        textShadow: '0 2px 8px rgba(0,0,0,0.8)',
     },
     subtitle: {
         color: '#F5F5F5',
+        textShadow: '0 2px 8px rgba(0,0,0,0.8)',
     },
 };
 
