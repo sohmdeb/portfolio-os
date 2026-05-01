@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import { Link } from '../general';
 
 import { useNavigate } from 'react-router';
@@ -13,44 +13,18 @@ const ANIME_GIFS = [
     '/backgrounds/anime5.gif',
 ];
 
-// Fisher-Yates shuffle
-const shuffleArray = (arr: string[]): string[] => {
-    const shuffled = [...arr];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-    return shuffled;
-};
+// Module-level counter: persists across mount/unmount, advances each time Home mounts
+let mountCount = 0;
 
-const CYCLE_INTERVAL = 8000; // 8 seconds per GIF
-
-const Home: React.FC<HomeProps> = (props) => {
+const Home: React.FC<HomeProps> = () => {
     const navigate = useNavigate();
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const shuffledRef = useRef<string[]>(shuffleArray(ANIME_GIFS));
 
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrentIndex((prev) => {
-                const next = prev + 1;
-                if (next >= shuffledRef.current.length) {
-                    // Re-shuffle for the next cycle, ensuring no repeat at boundary
-                    const lastShown = shuffledRef.current[shuffledRef.current.length - 1];
-                    let newShuffle = shuffleArray(ANIME_GIFS);
-                    while (newShuffle[0] === lastShown) {
-                        newShuffle = shuffleArray(ANIME_GIFS);
-                    }
-                    shuffledRef.current = newShuffle;
-                    return 0;
-                }
-                return next;
-            });
-        }, CYCLE_INTERVAL);
-        return () => clearInterval(timer);
+    // Pick the current GIF based on how many times this component has mounted
+    const currentGif = ANIME_GIFS[mountCount % ANIME_GIFS.length];
+    // Increment for next open — runs once per mount since this is module-level
+    React.useEffect(() => {
+        mountCount++;
     }, []);
-
-    const currentGif = shuffledRef.current[currentIndex];
 
     const goToContact = () => {
         navigate('/contact');
