@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ResumeDownload from './ResumeDownload';
 
 export interface ExperienceProps {}
 
 const Experience: React.FC<ExperienceProps> = (props) => {
+    useEffect(() => {
+        const audio = new Audio(process.env.PUBLIC_URL + '/experience.mp3');
+        audio.volume = 0.5;
+        audio.play().catch(() => {});
+        return () => {
+            audio.pause();
+            audio.currentTime = 0;
+        };
+    }, []);
     return (
         <div className="site-page-content">
             <ResumeDownload />

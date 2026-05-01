@@ -42,6 +42,16 @@ const Contact: React.FC<ContactProps> = (props) => {
     const [formMessageColor, setFormMessageColor] = useState('');
 
     useEffect(() => {
+        const audio = new Audio(process.env.PUBLIC_URL + '/contact.mp3');
+        audio.volume = 0.5;
+        audio.play().catch(() => {});
+        return () => {
+            audio.pause();
+            audio.currentTime = 0;
+        };
+    }, []);
+
+    useEffect(() => {
         if (validateEmail(email) && name.length > 0 && message.length > 0) {
             setIsFormValid(true);
         } else {

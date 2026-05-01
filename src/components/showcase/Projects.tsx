@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import software from '../../assets/pictures/projects/software.gif';
 import art from '../../assets/pictures/projects/art.gif';
@@ -65,6 +65,15 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
 };
 
 const Projects: React.FC<ProjectsProps> = (props) => {
+    useEffect(() => {
+        const audio = new Audio(process.env.PUBLIC_URL + '/work.mp3');
+        audio.volume = 0.5;
+        audio.play().catch(() => {});
+        return () => {
+            audio.pause();
+            audio.currentTime = 0;
+        };
+    }, []);
     return (
         <div className="site-page-content">
             <h1>Projects</h1>
