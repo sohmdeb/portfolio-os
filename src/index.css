@@ -274,7 +274,6 @@ input:active {
 .home-white-links .router-link:visited,
 .home-white-links a {
     color: #F5F5F5 !important;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
 }
 
 .loading::after {

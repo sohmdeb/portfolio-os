@@ -40,27 +40,29 @@ const Home: React.FC<HomeProps> = () => {
                 backgroundRepeat: 'no-repeat',
             }}
         >
-            <div style={styles.header}>
-                <h1 style={styles.name}>Soham Deb</h1>
-                <h2 style={styles.subtitle}>Video Editor & 3D Designer</h2>
-            </div>
-            <div style={styles.buttons} className="home-white-links">
-                <Link containerStyle={styles.link} to="about" text="ABOUT" />
-                <Link
-                    containerStyle={styles.link}
-                    to="experience"
-                    text="EXPERIENCE"
-                />
-                <Link
-                    containerStyle={styles.link}
-                    to="projects"
-                    text="PROJECTS"
-                />
-                <Link
-                    containerStyle={styles.link}
-                    to="contact"
-                    text="CONTACT"
-                />
+            <div style={styles.glassPanel}>
+                <div style={styles.header}>
+                    <h1 style={styles.name}>Soham Deb</h1>
+                    <h2 style={styles.subtitle}>Video Editor & 3D Designer</h2>
+                </div>
+                <div style={styles.buttons} className="home-white-links">
+                    <Link containerStyle={styles.link} to="about" text="ABOUT" />
+                    <Link
+                        containerStyle={styles.link}
+                        to="experience"
+                        text="EXPERIENCE"
+                    />
+                    <Link
+                        containerStyle={styles.link}
+                        to="projects"
+                        text="PROJECTS"
+                    />
+                    <Link
+                        containerStyle={styles.link}
+                        to="contact"
+                        text="CONTACT"
+                    />
+                </div>
             </div>
             <div style={styles.forHireContainer} onMouseDown={goToContact}>
                 {/* <img src={forhire} alt="" /> */}
@@ -80,10 +82,21 @@ const styles: StyleSheetCSS = {
         flexDirection: 'column',
         height: '100%',
     },
+    glassPanel: {
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '48px 64px',
+        borderRadius: 24,
+        background: 'rgba(255, 255, 255, 0.08)',
+        backdropFilter: 'blur(18px) saturate(1.4)',
+        WebkitBackdropFilter: 'blur(18px) saturate(1.4)',
+        border: '1px solid rgba(255, 255, 255, 0.18)',
+        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15)',
+    },
     header: {
         textAlign: 'center',
-        marginBottom: 64,
-        marginTop: 64,
+        marginBottom: 32,
 
         flexDirection: 'column',
         alignItems: 'center',
@@ -114,11 +127,9 @@ const styles: StyleSheetCSS = {
         marginBottom: 16,
         lineHeight: 0.9,
         color: '#F5F5F5',
-        textShadow: '0 2px 8px rgba(0,0,0,0.8)',
     },
     subtitle: {
         color: '#F5F5F5',
-        textShadow: '0 2px 8px rgba(0,0,0,0.8)',
     },
 };
 
