@@ -270,6 +270,12 @@ input:active {
     color: purple;
 }
 
+.home-white-links .router-link,
+.home-white-links .router-link:visited,
+.home-white-links a {
+    color: #ffffff !important;
+}
+
 .loading::after {
     display: inline-block;
     animation: dotty steps(1, end) 1s infinite;
